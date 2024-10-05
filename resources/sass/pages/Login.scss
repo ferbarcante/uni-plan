@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    }
+  
+
+    html{
+        background-color: #1D1328;
+        
+        }
+
+        .container{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100vh;
+            .container-form{
+                margin-right: 5rem;
+                display: flex;
+               justify-content: flex-end;
+               align-items: center;
+               flex-direction: column;
+               width: 30rem;
+               height: 19rem;
+               padding: 20px;
+               box-shadow: 1px 1px 10px 1px #111111;
+               background-color: #2C223F;
+               border-radius: 10px;
+               .title-login{
+              color:#08FA7C ;
+                font-size: 1.5rem;
+                font-weight: bold;
+               }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+           
+          
+           
+            background-color: #2C223F;
+            
+            flex-direction: column;
+    
+            input{
+                width: 100%;
+                border: none;
+                padding-left: 10px;
+                height: 2rem;
+                border-radius: 8px; 
+                background-color: #544669;
+            }
+           
+            button{
+                font-size: 1rem;
+                font-weight: bold;
+                margin-top: 2rem;
+                width: 100%;
+                border: none;
+                height: 2rem;
+                border-radius: 4px;
+                background-color: #08FA7C;
+            }
+            .div-label{
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+            }
+            label{
+                margin-left: 5px;
+                color: rgb(212, 212, 212);
+                margin-top: 1rem;
+                margin-bottom: 5px;
+    
+            }
+        }
+    }
+        }
+    

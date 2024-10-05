@@ -1,15 +1,11 @@
+import React from 'react'; // Certifique-se de que esta linha está presente
+import { createRoot } from 'react-dom/client';
+import { createInertiaApp } from '@inertiajs/react';
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 
-import React from 'react';
-import { Route, BrowserRouter,Routes } from "react-router-dom";
-import Login from "./pages/login";
-import ReactDOM from 'react-dom/client'
-
-ReactDOM.createRoot(document.getElementById('app')).render(
-    <React.StrictMode>
-          <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Login/>}/>
-        </Routes>
-        </BrowserRouter>
-    </React.StrictMode>
-    );
+createInertiaApp({
+    resolve: name => resolvePageComponent(`./pages/${name}.jsx`, import.meta.glob('./pages/**/*.jsx')),
+    setup({ el, App, props }) {
+        createRoot(el).render(<App {...props} />);
+    },
+});
